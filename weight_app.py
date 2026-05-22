@@ -12,7 +12,7 @@ for package in required_packages:
     try:
         __import__(package if package != 'scikit-learn' else 'sklearn')
     except ImportError:
-        subprocess.check_call([sys.executable, '-m', 'pip', 'install', package])
+        #subprocess.check_call([sys.executable, '-m', 'pip', 'install', package])
 
 # streamlit run으로 자동 재실행
 if os.environ.get('STREAMLIT_RUNNING') != '1':
